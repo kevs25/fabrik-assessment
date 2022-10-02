@@ -457,7 +457,7 @@ input[type="search"]:focus{
         position: absolute;
         width: 95%;
         height: 210px;
-        top: 26rem;
+        top: 28rem;
         left: .5rem;
         overflow-x: hidden;
         overflow-y: scroll;
