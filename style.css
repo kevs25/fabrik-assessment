@@ -433,12 +433,17 @@ input[type="search"]:focus{
         cursor: pointer;
         border-radius: 10px;
     }
+    .register:hover{
+        background-color: rgb(88, 66, 66);
+    } 
     .main-content{
+
         position: absolute;
-        top: 7rem;
+        top: 8.3rem;
         width: 95%;
-        height: 350px;
+        height: 250px;
         left: 1.5rem;
+
     }   
     h1{
         margin-left: 5rem;
