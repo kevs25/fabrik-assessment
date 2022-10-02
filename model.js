@@ -1,8 +1,7 @@
-import * as THREE from 'three';
-import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js'
-import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
-
-import background from './images/background.jpg';
+import * as THREE from '/node_modules/three/build/three.module';
+import {OrbitControls} from '/node_modules/three/examples/jsm/controls/OrbitControls.js'
+import {GLTFLoader} from '/node_modules/three/examples/jsm/loaders/GLTFLoader.js';
+import background from '/images/background.jpg';
 const model1 = new URL('./3D models/P1.glb', import.meta.url);
 
 const renderer = new THREE.WebGL1Renderer();
