@@ -14,6 +14,8 @@
     "three": "^0.144.0"
   },
   "devDependencies": {
+    "express":"*",
+    "body-parser":"*",
     "browserify-zlib": "^0.2.0",
     "crypto-browserify": "^3.12.0",
     "path-browserify": "^1.0.1",
