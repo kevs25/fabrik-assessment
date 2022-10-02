@@ -5,21 +5,22 @@
   "main": "home.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build"
+    "build": "parcel build",
+    "start": "serve"
   },
-
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dat.gui": "^0.7.9",
+    "serve": "^14.0.1",
     "three": "^0.144.0"
   },
   "devDependencies": {
-    "express":"*",
-    "body-parser":"*",
+    "body-parser": "*",
     "browserify-zlib": "^0.2.0",
     "crypto-browserify": "^3.12.0",
+    "express": "*",
     "path-browserify": "^1.0.1",
     "process": "^0.11.10",
     "querystring-es3": "^0.2.1",
