@@ -1,8 +1,9 @@
 import * as THREE from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js'
+/* import * as dat from 'dat.gui'; */
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js'; 
 import background from './images/background.jpg';
-const model1 = new URL('./3D models/P1.glb', import.meta.url);
+const model1 = new URL('./3D models/P12.glb', import.meta.url);
 
 const renderer = new THREE.WebGL1Renderer();
 
@@ -20,7 +21,7 @@ const camera = new THREE.PerspectiveCamera(
     0.1,
     1000
 );
-
+//orbit
 const orbit = new OrbitControls(camera, renderer.domElement);
 const axeshelper = new THREE.AxesHelper();
 scene.add(axeshelper);
@@ -31,6 +32,8 @@ orbit.update();
 const ambientLight = new THREE.AmbientLight(0xffffff,3);
 scene.add(ambientLight);
 
+/* const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 1);
+scene.add(directionalLight); */
 
 const spotLight = new THREE.SpotLight(0xFFFFFF,2);
 scene.add(spotLight);
@@ -39,8 +42,23 @@ spotLight.position.set(-120, -100, 0);
 spotLight.castShadow = true;
 spotLight.angle = 0.5;
 
+
+//dat.gui
+/* const gui = new dat.GUI();
+
+const options = {
+    sphereColor: '#ffea00',
+    wireframe: false,
+    speed: 0.01
+};
+// color palette
+gui.addColor(options, 'sphereColor').onChange(function(e){
+    sphere.material.color.set(e);
+}) */
+ 
 const textureLoader = new THREE.TextureLoader();
 scene.background = textureLoader.load(background); 
+/* renderer.setClearColor(0x000000); */
 
 const loader = new GLTFLoader();
 loader.load(model1.href, function(glb){
@@ -58,6 +76,7 @@ function animate () {
 }
 
 renderer.setAnimationLoop(animate);
+
 
 window.addEventListener('resize', function() {
     camera.aspect = window.innerWidth / this.window.innerHeight;
